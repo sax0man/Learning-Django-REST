@@ -6,7 +6,7 @@ from .serializers import AuthorSerializer
 from rest_framework.generics import ListAPIView
 
 # Create your views here. 
-class AuthorView(ListAPIView):
+class AuthorView(generics.ListCreateAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
 
